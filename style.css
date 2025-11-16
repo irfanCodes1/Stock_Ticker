@@ -1,0 +1,14 @@
+body{
+   background-color: rgba(0, 0, 0, 0.806)
+   
+}
+
+
+.container{
+    width: 400px;
+    padding: 10px 30px;
+    margin: 100px auto;
+    border-radius: 10px;
+    color: black;
+    background-color: whitesmoke;
+}
