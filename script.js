@@ -12,8 +12,9 @@ let previousPrice=null;
 function renderStockTicker(stockData){
     const stockDisplayName=document.getElementById("name");
     const stockDisplaySymbol=document.getElementById("symbol");
-    const stockDisplayPrice=document.getElementById("price");
-    const priceIcon=document.getElementById("price-icon")
+    const stockDisplayPrice=document.getElementById("price-value");
+    const priceIcon=document.getElementById("price-icon");
+
     const stockDisplayTime=document.getElementById("time");
 
     const  {name,symbol,price,time}=stockData;
@@ -21,7 +22,8 @@ function renderStockTicker(stockData){
     const priceIconEl=document.createElement("img");
     priceIconEl.src=`images/${priceDirectionIcon}`;
     priceIconEl.alt=`price direction icon`;
-    priceIcon.appendChild(priceIconEl)
+    priceIcon.src = `images/${priceDirectionIcon}`;
+
 
     stockDisplayName.innerText=`Name:   ${name}`;
     stockDisplaySymbol.innerText=`Symbol:  ${symbol}`
