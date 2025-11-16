@@ -26,6 +26,6 @@ function renderStockTicker(stockData){
     stockDisplayName.innerText=`Name:   ${name}`;
     stockDisplaySymbol.innerText=`Symbol:  ${symbol}`
     stockDisplayPrice.innerText=`Price:  ${price}`;
-    stockDisplayTime.innerText=`TSime:  ${time}`;
+    stockDisplayTime.innerText=`Time:  ${time}`;
     previousPrice=price;
 }
