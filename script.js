@@ -17,13 +17,15 @@ function renderStockTicker(stockData){
     const stockDisplayTime=document.getElementById("time");
 
     const  {name,symbol,price,time}=stockData;
-    const priceDirectionIcon=price>previousPrice?'images/images.png':price<previousPrice?'images/Red_triangle.svg.png':'ArrowRight-gray.svg'
+    const priceDirectionIcon=price>previousPrice?'images.png':price<previousPrice?'Red_triangle.svg.png':'ArrowRight-gray.svg'
     const priceIconEl=document.createElement("img");
-    priceIconEl.src=priceDirectionIcon;
-    priceIconEl.src=`price direction icon`;
+    priceIconEl.src=`images/${priceDirectionIcon}`;
+    priceIconEl.alt=`price direction icon`;
+    priceIcon.appendChild(priceIconEl)
 
     stockDisplayName.innerText=`Name:   ${name}`;
     stockDisplaySymbol.innerText=`Symbol:  ${symbol}`
     stockDisplayPrice.innerText=`Price:  ${price}`;
     stockDisplayTime.innerText=`TSime:  ${time}`;
+    previousPrice=price;
 }
