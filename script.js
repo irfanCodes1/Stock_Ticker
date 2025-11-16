@@ -18,6 +18,9 @@ function renderStockTicker(stockData){
 
     const  {name,symbol,price,time}=stockData;
     const priceDirectionIcon=price>previousPrice?'images/images.png':price<previousPrice?'images/Red_triangle.svg.png':'ArrowRight-gray.svg'
+    const priceIconEl=document.createElement("img");
+    priceIconEl.src=priceDirectionIcon;
+    priceIconEl.src=`price direction icon`;
 
     stockDisplayName.innerText=`Name:   ${name}`;
     stockDisplaySymbol.innerText=`Symbol:  ${symbol}`
