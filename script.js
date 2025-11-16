@@ -5,6 +5,8 @@ setInterval(function(){
     renderStockTicker(stockData);
 },1500)
 
+let previousPrice=null;
+
 
 
 function renderStockTicker(stockData){
@@ -15,6 +17,7 @@ function renderStockTicker(stockData){
     const stockDisplayTime=document.getElementById("time");
 
     const  {name,symbol,price,time}=stockData;
+    const priceDirectionIcon=price>previousPrice?'images/images.png':price<previousPrice?'images/Red_triangle.svg.png':'ArrowRight-gray.svg'
 
     stockDisplayName.innerText=`Name:   ${name}`;
     stockDisplaySymbol.innerText=`Symbol:  ${symbol}`
